@@ -1,0 +1,201 @@
+{
+ "name": "Rafa Moreno",
+ "role": {
+  "es": "Java, Spring Boot, React, AWS y seguridad ofensiva",
+  "en": "Java, Spring Boot, React, AWS and offensive security"
+ },
+ "intro": {
+  "es": "Graduado en DAM y SMR, cursando la especialización en Ciberseguridad. Construyo proyectos con Java, React y Flutter, los despliego en AWS con Docker y Terraform, y reporto vulnerabilidades en programas de bug bounty. Busco mi primera oportunidad en desarrollo, cloud o ciberseguridad.",
+  "en": "Graduate in cross-platform app development (DAM) and IT systems and networks (SMR), currently studying a Cybersecurity specialization. I build projects with Java, React and Flutter, deploy them on AWS with Docker and Terraform, and report vulnerabilities in bug bounty programs. Looking for my first role in development, cloud or cybersecurity."
+ },
+ "links": {
+  "github": "https://github.com/rafamorenoo",
+  "linkedin": "https://linkedin.com/in/rafa-moreno-5b44b4307",
+  "email": "rafamorenoo2004@gmail.com",
+  "cv": "CV_Rafa_Moreno.pdf"
+ },
+ "ui": {
+  "es": {
+   "projects": "Proyectos",
+   "research": "Security research",
+   "skills": "Skills",
+   "contact": "Contacto",
+   "cv": "Descargar CV",
+   "code": "Código",
+   "finding": "Hallazgo",
+   "program": "Programa",
+   "sev": "Severidad",
+   "status": "Estado",
+   "contactText": "Abierto a oportunidades en desarrollo, redes y ciberseguridad.",
+   "languages": "Idiomas"
+  },
+  "en": {
+   "projects": "Projects",
+   "research": "Security research",
+   "skills": "Skills",
+   "contact": "Contact",
+   "cv": "Download CV",
+   "code": "Code",
+   "finding": "Finding",
+   "program": "Program",
+   "sev": "Severity",
+   "status": "Status",
+   "contactText": "Open to opportunities in development, networking and cybersecurity.",
+   "languages": "Languages"
+  }
+ },
+ "projects": [
+  {
+   "title": "SkillSwap (TFG DAM)",
+   "year": 2025,
+   "desc": {
+    "es": "Plataforma full stack de intercambio de habilidades con matching por IA (Groq LLaMA 3.3), chat en tiempo real con WebSockets, autenticación JWT y app móvil nativa con Flutter.",
+    "en": "Full stack skill-exchange platform with AI matching (Groq LLaMA 3.3), real-time WebSocket chat, JWT authentication and a native Flutter mobile app."
+   },
+   "tech": "Java 21, Spring Boot 3, React 18, Flutter, PostgreSQL, WebSockets, JWT, Docker",
+   "url": "https://github.com/rafamorenoo/tfg"
+  },
+  {
+   "title": "LinkTrack",
+   "year": 2025,
+   "desc": {
+    "es": "Acortador de URLs con analíticas en tiempo real. Arquitectura ALB, ECS Fargate, RDS, Redis y SQS. Infraestructura como código con Terraform modular, CI/CD con GitHub Actions y credenciales en Secrets Manager.",
+    "en": "URL shortener with real-time analytics. ALB, ECS Fargate, RDS, Redis and SQS architecture. Modular Terraform infrastructure as code, GitHub Actions CI/CD and credentials in Secrets Manager."
+   },
+   "tech": "Spring Boot, PostgreSQL, Redis, AWS ECS, SQS, Terraform, Docker, GitHub Actions",
+   "url": "https://github.com/rafamorenoo/linktrack"
+  },
+  {
+   "title": "Security Writeups",
+   "year": 2026,
+   "desc": {
+    "es": "Writeups estructurados y sanitizados de investigación en programas de bug bounty (HackerOne, Bugcrowd): metodología, superficie de ataque y hallazgos validados.",
+    "en": "Structured, sanitized writeups of bug bounty research (HackerOne, Bugcrowd): methodology, attack surface and validated findings."
+   },
+   "tech": "OWASP Top 10, Recon, Burp Suite, Python, Bash",
+   "url": "https://github.com/rafamorenoo/security-writeups"
+  },
+  {
+   "title": "Pipeline DeFi",
+   "year": 2026,
+   "desc": {
+    "es": "Metodología propia para auditar smart contracts con IA: biblioteca de 19 patrones de vulnerabilidad, aplicada a Sumer Protocol.",
+    "en": "My own methodology for auditing smart contracts with AI: a library of 19 vulnerability patterns, applied to Sumer Protocol."
+   },
+   "tech": "Solidity, Foundry, DeFi security, Invariant testing"
+  },
+  {
+   "title": "Pipeline de recon",
+   "year": 2026,
+   "desc": {
+    "es": "Monitorización continua de subdominios y endpoints para detectar nuevos vectores de ataque, con notificaciones en tiempo real.",
+    "en": "Continuous subdomain and endpoint monitoring to spot new attack vectors, with real-time notifications."
+   },
+   "tech": "Bash, Python, Subfinder, Httpx, Katana, LinkFinder, Cron"
+  }
+ ],
+ "research": [
+  {
+   "title": "Anti-Liquidation Cooldown Bypass",
+   "program": "Sumer Protocol (Bugrap)",
+   "year": 2026,
+   "sev": "Critical",
+   "status": {
+    "es": "Aceptado, sin confirmación final",
+    "en": "Accepted, not finally confirmed"
+   }
+  },
+  {
+   "title": {
+    "es": "Acceso sin autenticación a un panel de automatización interno",
+    "en": "Unauthenticated access to an internal automation panel"
+   },
+   "program": "Vodafone DE (HackerOne)",
+   "year": 2026,
+   "sev": "Medium",
+   "status": {
+    "es": "Resuelto",
+    "en": "Resolved"
+   }
+  },
+  {
+   "title": {
+    "es": "Falta de autenticación en una herramienta interna de mocking de APIs",
+    "en": "Missing authentication on an internal API mocking tool"
+   },
+   "program": "Vodafone (HackerOne)",
+   "year": 2026,
+   "sev": "Medium",
+   "status": {
+    "es": "Resuelto, retest aceptado",
+    "en": "Resolved, retest accepted"
+   }
+  },
+  {
+   "title": "Host Header Injection with Open Redirect",
+   "program": "NASA (Bugcrowd)",
+   "year": 2025,
+   "sev": "Info",
+   "status": {
+    "es": "Reportado",
+    "en": "Reported"
+   }
+  }
+ ],
+ "extra": {
+  "es": "Invitado a 2 programas privados de bug bounty en Bugcrowd (2023).",
+  "en": "Invited to 2 private bug bounty programs on Bugcrowd (2023)."
+ },
+ "skills": [
+  {
+   "k": {
+    "es": "Backend",
+    "en": "Backend"
+   },
+   "v": "Java 21, Spring Boot, REST APIs, PostgreSQL, Node.js, Python"
+  },
+  {
+   "k": {
+    "es": "Frontend y móvil",
+    "en": "Frontend and mobile"
+   },
+   "v": "React 18, Next.js, Flutter, TypeScript"
+  },
+  {
+   "k": {
+    "es": "Cloud y DevOps",
+    "en": "Cloud and DevOps"
+   },
+   "v": "AWS (EC2, S3, ECS), Docker, Terraform, GitHub Actions, Linux"
+  },
+  {
+   "k": {
+    "es": "Seguridad",
+    "en": "Security"
+   },
+   "v": "OWASP Top 10, Burp Suite Pro, recon, auditoría de smart contracts"
+  }
+ ],
+ "languages": [
+  {
+   "k": {
+    "es": "Español",
+    "en": "Spanish"
+   },
+   "v": {
+    "es": "Nativo",
+    "en": "Native"
+   }
+  },
+  {
+   "k": {
+    "es": "Inglés",
+    "en": "English"
+   },
+   "v": {
+    "es": "B2 First Cambridge, C1 Aptis ESOL General",
+    "en": "B2 First Cambridge, C1 Aptis ESOL General"
+   }
+  }
+ ]
+}
