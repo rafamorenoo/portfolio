@@ -1,5 +1,7 @@
 <!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Rafa Moreno</title><meta name="description" content="Rafa Moreno: Java, Spring Boot, React, AWS y seguridad ofensiva.">
+<title>Rafa Moreno | Desarrollo, cloud y ciberseguridad</title>
+<meta name="description" content="Rafa Moreno: Java, Spring Boot, React, AWS y seguridad ofensiva. Técnico Superior DAM, especializándose en ciberseguridad.">
+<meta name="theme-color" content="#1b2a5c">
 <style>
 :root{--bg:#f6f7f9;--fg:#171c28;--mut:#566074;--ac:#1b2a5c;--bd:#d9dee8;--crit:#b3261e;--med:#a15c00;--inf:#44546f}
 @media(prefers-color-scheme:dark){:root{--bg:#10141e;--fg:#e6eaf3;--mut:#9ba6bb;--ac:#9db9ff;--bd:#283049;--crit:#ff8a80;--med:#ffb74d;--inf:#9fb0cc}}
@@ -9,40 +11,50 @@ main{max-width:46rem;margin:0 auto;padding:2.5rem 1.25rem 4rem}
 h1,h2,h3{font-family:"Iowan Old Style",Georgia,serif;line-height:1.2;margin:0}
 h1{font-size:clamp(2.4rem,8vw,3.6rem);color:var(--ac)}h2{font-size:1.5rem;color:var(--ac);margin:3rem 0 1rem}h3{font-size:1.15rem}
 a{color:var(--ac)}a:focus-visible,button:focus-visible{outline:3px solid var(--ac);outline-offset:2px}
-header{display:flex;justify-content:space-between;align-items:center;gap:1rem}
+header{display:flex;justify-content:flex-end;align-items:center;gap:1rem}
 button,.btn{font:inherit;background:none;border:1px solid var(--ac);color:var(--ac);padding:.35rem .8rem;border-radius:6px;cursor:pointer;text-decoration:none;display:inline-block}
 .btn{background:var(--ac);color:var(--bg);font-weight:600}
-.role{font-size:1.15rem;color:var(--mut);margin:.5rem 0 1.25rem}.intro{max-width:40rem}
-.links{display:flex;flex-wrap:wrap;gap:.75rem;align-items:center;margin-top:1.25rem}
+.hero{display:flex;align-items:center;gap:1.25rem 1.5rem;flex-wrap:wrap;margin-bottom:1.25rem}.hero img{width:120px;height:120px;border-radius:50%;object-fit:cover;border:3px solid var(--bd);flex:none}@media(max-width:36rem){.hero img{width:96px;height:96px}}.role{font-size:1.15rem;color:var(--mut);margin:.5rem 0 0}.intro{max-width:40rem}
+.links{display:flex;flex-wrap:wrap;gap:.75rem 1rem;align-items:center;margin-top:1.25rem}
 .item{padding:1.1rem 0;border-top:1px solid var(--bd)}.item p{margin:.4rem 0}.meta{color:var(--mut);font-size:.9rem}
 .log{width:100%;border-collapse:collapse;font-size:.95rem}.log th{text-align:left;color:var(--mut);font-weight:600;border-bottom:2px solid var(--ac);padding:.4rem .5rem .4rem 0}
 .log td{padding:.7rem .5rem .7rem 0;border-bottom:1px solid var(--bd);vertical-align:top}
 .sev{font-weight:700}.Critical{color:var(--crit)}.Medium{color:var(--med)}.Info{color:var(--inf)}
 dl{margin:0}dt{font-weight:600;margin-top:.7rem}dd{margin:0;color:var(--mut)}
-@media(max-width:36rem){.log thead{display:none}.log,.log tbody,.log tr,.log td{display:block}.log td{border:0;padding:.1rem 0}.log tr{border-bottom:1px solid var(--bd);padding:.7rem 0}}
+@media(max-width:36rem){.log thead{display:none}.log,.log tbody,.log tr,.log td{display:block}.log td{border:0;padding:.1rem 0}.log td::before{content:attr(data-label) ": ";color:var(--mut);font-weight:400}.log tr{border-bottom:1px solid var(--bd);padding:.7rem 0}}
 footer{margin-top:3rem;color:var(--mut);font-size:.9rem}
 </style></head><body><main>
-<header><span id="lg" class="meta"></span><button id="sw" type="button" aria-label="Language"></button></header>
-<h1 id="name"></h1><p class="role" id="role"></p><p class="intro" id="intro"></p><div class="links" id="links"></div>
-<h2 id="hl"></h2><dl id="langs"></dl><h2 id="hp"></h2><div id="projects"></div>
+<header><button id="sw" type="button"></button></header>
+<div class="hero"><img id="photo" src="foto.jpg" width="120" height="120" alt="" decoding="async"><div><h1 id="name"></h1><p class="role" id="role"></p></div></div><p class="intro" id="intro"></p><div class="links" id="links"></div>
+<noscript><p>Este sitio necesita JavaScript. Escríbeme a rafamorenoo2004@gmail.com. / This site needs JavaScript. Email me at rafamorenoo2004@gmail.com.</p></noscript>
+<p id="err" role="alert" hidden></p>
+<h2 id="he"></h2><div id="experience"></div>
+<h2 id="hp"></h2><div id="projects"></div>
 <h2 id="hr"></h2><table class="log"><thead><tr id="th"></tr></thead><tbody id="research"></tbody></table><p class="meta" id="extra"></p>
+<h2 id="hed"></h2><div id="education"></div>
 <h2 id="hs"></h2><dl id="skills"></dl>
+<h2 id="hl"></h2><dl id="langs"></dl>
 <h2 id="hc"></h2><p id="ct"></p>
 <footer>© 2026 Rafa Moreno</footer></main>
 <script>
 let D,lang=(navigator.language||"es").startsWith("en")?"en":"es";
-const $=i=>document.getElementById(i),t=o=>o&&o[lang]!==undefined?o[lang]:o;
-const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const $=i=>document.getElementById(i),t=o=>o&&typeof o==="object"&&o[lang]!==undefined?o[lang]:o;
+const esc=s=>String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const SEV=["Critical","High","Medium","Low","Info"];
 function render(){const u=D.ui[lang],L=D.links;document.documentElement.lang=lang;
-$("name").textContent=D.name;$("role").textContent=t(D.role);$("intro").textContent=t(D.intro);
-$("sw").textContent=lang==="es"?"EN":"ES";$("lg").textContent="";
-$("links").innerHTML=`<a class="btn" href="${L.cv}">${u.cv}</a><a href="${L.github}">GitHub</a><a href="${L.linkedin}">LinkedIn</a><a href="mailto:${L.email}">${L.email}</a>`;
-$("hl").textContent=u.languages;$("langs").innerHTML=D.languages.map(s=>`<dt>${esc(t(s.k))}</dt><dd>${esc(t(s.v))}</dd>`).join("");$("hp").textContent=u.projects;$("hr").textContent=u.research;$("hs").textContent=u.skills;$("hc").textContent=u.contact;$("ct").textContent=u.contactText;
-$("projects").innerHTML=D.projects.map(p=>`<article class="item"><h3>${esc(p.title)} <span class="meta">${p.year}</span></h3><p>${esc(t(p.desc))}</p><p class="meta">${esc(p.tech)}${p.url?` — <a href="${p.url}">${u.code}</a>`:""}</p></article>`).join("");
-$("th").innerHTML=["finding","program","sev","status"].map(k=>`<th scope="col">${u[k]}</th>`).join("");
-$("research").innerHTML=D.research.map(r=>`<tr><td>${esc(t(r.title))}</td><td>${esc(r.program)}, ${r.year}</td><td class="sev ${r.sev}">${r.sev}</td><td>${esc(t(r.status))}</td></tr>`).join("");
-$("extra").textContent=t(D.extra);
-$("skills").innerHTML=D.skills.map(s=>`<dt>${esc(t(s.k))}</dt><dd>${esc(t(s.v))}</dd>`).join("");}
+document.title=lang==="es"?"Rafa Moreno | Desarrollo, cloud y ciberseguridad":"Rafa Moreno | Development, cloud and cybersecurity";
+$("name").textContent=D.name;$("photo").alt=lang==="es"?"Foto de Rafa Moreno":"Photo of Rafa Moreno";$("role").textContent=t(D.role);$("intro").textContent=t(D.intro);
+$("sw").textContent=lang==="es"?"EN":"ES";$("sw").setAttribute("aria-label",u.switchTo);
+$("links").innerHTML=`<a class="btn" href="${esc(L.cv)}">${esc(u.cv)}</a><a href="${esc(L.github)}">GitHub</a><a href="${esc(L.linkedin)}">LinkedIn</a><a href="mailto:${esc(L.email)}">${esc(L.email)}</a>`;
+$("he").textContent=u.experience;$("hp").textContent=u.projects;$("hr").textContent=u.research;$("hed").textContent=u.education;$("hs").textContent=u.skills;$("hl").textContent=u.languages;$("hc").textContent=u.contact;$("ct").textContent=u.contactText;
+$("experience").innerHTML=D.experience.map(e=>`<article class="item"><h3>${esc(t(e.role))}</h3><p class="meta">${esc(e.org)}, ${esc(t(e.period))}</p><p>${esc(t(e.desc))}</p></article>`).join("");
+$("projects").innerHTML=D.projects.map(p=>`<article class="item"><h3>${esc(p.title)} <span class="meta">${esc(p.year)}</span></h3><p>${esc(t(p.desc))}</p><p class="meta">${esc(p.tech)}${p.url?`. <a href="${esc(p.url)}">${esc(u.code)}</a>`:""}</p></article>`).join("");
+$("th").innerHTML=["company","sev","status"].map(k=>`<th scope="col">${esc(u[k])}</th>`).join("");
+$("research").innerHTML=D.research.map(r=>`<tr><td data-label="${esc(u.company)}">${esc(r.company)} <span class="meta">${esc(r.year)}</span></td><td data-label="${esc(u.sev)}" class="sev ${SEV.includes(r.sev)?r.sev:""}">${esc(r.sev)}</td><td data-label="${esc(u.status)}">${esc(t(r.status))}</td></tr>`).join("");
+$("extra").innerHTML=`${esc(t(D.extra))} <a href="${esc(L.hackerone)}">HackerOne</a>`;
+$("education").innerHTML=D.education.map(e=>`<article class="item"><h3>${esc(t(e.title))}</h3><p class="meta">${esc(e.org)}, ${esc(t(e.period))}</p><p>${esc(t(e.note))}</p></article>`).join("");
+$("skills").innerHTML=D.skills.map(s=>`<dt>${esc(t(s.k))}</dt><dd>${esc(t(s.v))}</dd>`).join("");
+$("langs").innerHTML=D.languages.map(s=>`<dt>${esc(t(s.k))}</dt><dd>${esc(t(s.v))}</dd>`).join("");}
 $("sw").onclick=()=>{lang=lang==="es"?"en":"es";render()};
-fetch("content.json").then(r=>r.json()).then(j=>{D=j;render()});
+fetch("content.json").then(r=>{if(!r.ok)throw 0;return r.json()}).then(j=>{D=j;render()}).catch(()=>{const e=$("err");e.hidden=false;e.textContent="No se pudo cargar el contenido. Escríbeme a rafamorenoo2004@gmail.com."});
 </script></body></html>
