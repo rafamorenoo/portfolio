@@ -120,16 +120,6 @@
    "url": "https://github.com/rafamorenoo/linktrack"
   },
   {
-   "title": "Security Writeups",
-   "year": 2026,
-   "desc": {
-    "es": "Writeups estructurados y sanitizados de investigación en programas de bug bounty (HackerOne, Bugcrowd): metodología, superficie de ataque y hallazgos validados.",
-    "en": "Structured, sanitized writeups of bug bounty research (HackerOne, Bugcrowd): methodology, attack surface and validated findings."
-   },
-   "tech": "OWASP Top 10, Recon, Burp Suite, Python, Bash",
-   "url": "https://github.com/rafamorenoo/security-writeups"
-  },
-  {
    "title": "Pipeline DeFi",
    "year": 2026,
    "desc": {
