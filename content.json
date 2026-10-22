@@ -5,8 +5,8 @@
   "en": "Java, Spring Boot, React, AWS and offensive security"
  },
  "intro": {
-  "es": "Técnico Superior en Desarrollo de Aplicaciones Multiplataforma y Técnico en Sistemas Microinformáticos y Redes, actualmente especializándome en ciberseguridad. Aquí comparto mis conocimientos y mis proyectos de desarrollo, cloud y seguridad.",
-  "en": "Higher Technician in Cross-platform Application Development (DAM) and Technician in IT Systems and Networks (SMR), currently specializing in cybersecurity. Here I share my knowledge and my development, cloud and security projects."
+  "es": "Técnico Superior en Desarrollo de Aplicaciones Multiplataforma y Técnico en Sistemas Microinformáticos y Redes, actualmente cursando el Grado en Ingeniería Informática y la Especialización en Ciberseguridad. Aquí comparto mis conocimientos y mis proyectos de desarrollo, cloud y seguridad.",
+  "en": "Higher Technician in Cross-platform Application Development (DAM) and Technician in IT Systems and Networks (SMR), currently studying a Bachelor's Degree in Computer Engineering and completing the Specialization Course in Cybersecurity. Here I share my knowledge and my development, cloud and security projects."
  },
  "links": {
   "github": "https://github.com/rafamorenoo",
@@ -181,6 +181,21 @@
   "en": "Invited to 2 private bug bounty programs on Bugcrowd (2023). Technical details of the reports are not published, out of respect for each program's confidentiality."
  },
  "education": [
+  {
+   "title": {
+    "es": "Grado en Ingeniería Informática",
+    "en": "Bachelor's Degree in Computer Engineering"
+   },
+   "org": "UNED",
+   "period": {
+    "es": "Oct 2026 - Actualmente",
+    "en": "Oct 2026 - Present"
+   },
+   "note": {
+    "es": "Modalidad a distancia.",
+    "en": "Distance learning."
+   }
+  },
   {
    "title": {
     "es": "Curso de Especialización en Ciberseguridad en Entornos de las Tecnologías de la Información",
